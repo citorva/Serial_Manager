@@ -1,0 +1,67 @@
+/* Titlebar element: #titlebar */
+#titlebar {
+  display: flex;
+  align-content: stretch;
+  /* Row flex direction for horizontal direction */
+  flex-direction: row;
+  
+  /* Formatting titlebar */
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: -moz-none;
+  background: #ffc107;
+}
+
+/* RTL titlebar direction */
+#titlebar.rtl {
+  flex-direction: row-reverse;
+}
+
+/* Window maximized/minimized buttons */
+#titlebar.maximized #window-button #maximize {
+  display: none;
+}
+#titlebar.minimized #window-button #minimize {
+  display: none;
+}
+
+/* Title text formatting */
+#titlebar #title {
+  flex: 1;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-app-region: drag;
+  padding-left: 2px; padding-right: 2px;
+  text-align: center;
+}
+
+/* Window buttons */
+#titlebar #window-button {
+  display: flex;
+  align-content: stretch;
+  /* Row flex direction for horizontal direction */
+  flex-direction: row;
+}
+
+#titlebar #window-button div {
+  width: 48px;
+  line-height: 32px;
+  text-align: center;
+  cursor: default;
+}
+
+#titlebar #window-button div:hover {
+  background: rgba(255, 255, 255, 0.5)
+}
+
+#titlebar #window-button div#close:hover {
+  background: rgba(255, 0, 0, 0.75)
+}
+
+/* If use osx system */
+.osx #titlebar #window-button {
+  display: none;
+}

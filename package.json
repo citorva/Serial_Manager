@@ -1,0 +1,11 @@
+{
+  "name": "zen-serial-communicator",
+  "version": "0.1.0",
+  "main": "app.js",
+  "description": "GUI tool to dialog with serial components",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "citorva",
+  "license": "MPL-2.0"
+}

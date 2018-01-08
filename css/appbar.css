@@ -1,0 +1,92 @@
+#appbar {
+    width: 64px;
+    padding-top: 32px;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: -moz-none;
+    background-color: #424242;
+    overflow: hidden;
+}
+
+#appbar #appbar-scroll {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    
+    min-height: 100%;
+}
+
+#appbar #appbar-scroll .space {
+    height: 8px;
+}
+
+#appbar #appbar-scroll .stretch-space {
+    height: 8px;
+    flex: 1;
+}
+
+#appbar #appbar-scroll .app {
+    line-height: 64px;
+    font-size: 48px;
+    font-family: 'iconfont';
+    position: relative;
+    color: #212121;
+    transition: color .5s ease;
+    cursor: pointer;
+    margin-top: 4px;
+    text-align: center;
+}
+
+#appbar #appbar-scroll .app.active {
+    cursor: default;
+}
+
+#appbar #appbar-scroll .app .desc {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    line-height: 100%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    position: absolute;
+    top: 32px;
+    left: 70px;
+    transform: translateY(-50%) scaleX(0);
+
+    padding: 2px;
+    padding-left: 8px; padding-right: 8px;
+    min-width: 128px;
+    max-width: 512px;
+
+    color: #ffffff;
+    background-color: #424242;
+    border-radius: 6px;
+
+    pointer-events: none;
+    transform-origin: 0 0;
+    transition: transform .2s ease;
+}
+
+#appbar #appbar-scroll .app:not(.active):hover .desc, #appbar .app.tutorial .desc {
+    transform: translateY(-50%) scaleX(1);
+}
+
+#appbar #appbar-scroll .app:hover , #appbar .app.tutorial, #appbar .app.active {
+    color: #ffc107;
+}
+
+#appbar #appbar-scroll .app .desc::before {
+    content: ' ';
+    
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    border: solid transparent;
+    height: 0; width: 0;
+    border-right-color: #424242;
+    border-width: 4px;
+    margin-top: -4px;
+}
